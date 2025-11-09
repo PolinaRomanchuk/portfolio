@@ -40,7 +40,7 @@ $oswald: 'Oswald', sans-serif;
 }
 
 .h2 {
-  @include text-style($oswald, 32px, $regular, 40%);
+  @include text-style($oswald, 32px, $regular, 40%, normal, uppercase);
 }
 
 .h3 {
