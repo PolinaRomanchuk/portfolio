@@ -39,11 +39,16 @@ const Portfolio = (): ReactElement => {
         >
           {photos.map((photo) => (
             <SwiperSlide
-              key={photo}
+              key={photo.id}
               style={photo.containerstyle}
               className="mx-2"
             >
-              <img src={photo.url} alt="Portfolio" style={photo.style} />
+              <img
+                src={photo.url}
+                alt="Portfolio"
+                style={photo.style}
+                className="object-fit-cover"
+              />
             </SwiperSlide>
           ))}
         </Swiper>

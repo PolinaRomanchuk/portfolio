@@ -12,6 +12,7 @@ import Photo11 from '../assets/portfolio/11.png';
 import Photo12 from '../assets/portfolio/12.png';
 
 type Photo = {
+  id: number;
   url: string;
   style: object;
   containerstyle: object;
@@ -39,61 +40,73 @@ const PADDING_BOTTOM_120 = { padding: '0px 0px 120px' };
 
 export const photos: Photo = [
   {
+    id: 1,
     url: Photo,
     style: LARGE_PORTRAIT,
     containerstyle: { ...CONTAINER_TALL, ...PADDING_TOP_120 },
   },
   {
+    id: 2,
     url: Photo2,
     style: SQUARE,
     containerstyle: { ...CONTAINER_SQUARE },
   },
   {
+    id: 3,
     url: Photo3,
     style: MEDIUM_PORTRAIT,
     containerstyle: { ...CONTAINER_MEDIUM, ...PADDING_TOP_120 },
   },
   {
+    id: 4,
     url: Photo4,
     style: LARGE_PORTRAIT,
     containerstyle: { ...CONTAINER_TALL, ...PADDING_BOTTOM_120 },
   },
   {
+    id: 5,
     url: Photo5,
     style: MEDIUM_PORTRAIT,
     containerstyle: { ...CONTAINER_MEDIUM, ...PADDING_TOP_120 },
   },
   {
+    id: 6,
     url: Photo6,
     style: SQUARE,
     containerstyle: { ...CONTAINER_SQUARE },
   },
   {
+    id: 7,
     url: Photo7,
     style: MEDIUM_PORTRAIT,
     containerstyle: { ...CONTAINER_MEDIUM },
   },
   {
+    id: 8,
     url: Photo8,
     style: LARGE_PORTRAIT,
     containerstyle: { ...CONTAINER_TALL, ...PADDING_TOP_120 },
   },
   {
+    id: 9,
     url: Photo9,
     style: SQUARE,
     containerstyle: { ...CONTAINER_SQUARE },
   },
   {
+    id: 10,
     url: Photo10,
     style: MEDIUM_PORTRAIT,
     containerstyle: { ...CONTAINER_MEDIUM },
   },
   {
+    id: 11,
     url: Photo11,
     style: MEDIUM_PORTRAIT,
     containerstyle: { ...CONTAINER_MEDIUM, ...PADDING_TOP_120 },
   },
   {
+    id: 12,
     url: Photo12,
     style: LARGE_PORTRAIT,
     containerstyle: { ...CONTAINER_TALL },
