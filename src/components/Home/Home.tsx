@@ -5,6 +5,7 @@ import About from './About';
 import Portfolio from './Portfolio';
 import Price from './Price';
 import FAQ from './FAQ';
+import Footer from '../Footer/Footer';
 
 const Home = (): ReactElement => {
   return (
@@ -15,6 +16,7 @@ const Home = (): ReactElement => {
       <Portfolio />
       <Price />
       <FAQ />
+      <Footer />
     </>
   );
 };
