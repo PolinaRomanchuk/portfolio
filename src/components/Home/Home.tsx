@@ -3,7 +3,8 @@ import Header from '../Header/Header';
 import Hero from './Hero';
 import About from './About';
 import Portfolio from './Portfolio';
-import Price from './price';
+import Price from './Price';
+import FAQ from './FAQ';
 
 const Home = (): ReactElement => {
   return (
@@ -13,6 +14,7 @@ const Home = (): ReactElement => {
       <About />
       <Portfolio />
       <Price />
+      <FAQ />
     </>
   );
 };
