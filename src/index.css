@@ -1,0 +1,140 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #ff3c3c;
+  --color-secondary: #222222;
+  --color-light: #ffffff;
+}
+
+:root {
+  --mulish: 'Mulish', sans-serif;
+  --oswald: 'Oswald', sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  box-sizing: border-box;
+}
+
+.h1 {
+  font-family: var(--oswald);
+  font-size: 116px;
+  font-weight: var(--fw-light);
+  line-height: 132%;
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-family: var(--oswald);
+  font-size: 32px;
+  font-weight: var(--fw-regular);
+  line-height: 40%;
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-family: var(--oswald);
+  font-size: 20px;
+  font-weight: var(--fw-regular);
+  line-height: 28%;
+  text-transform: uppercase;
+}
+
+.h4 {
+  font-family: var(--oswald);
+  font-size: 16px;
+  font-weight: var(--fw-regular);
+  line-height: 24%;
+}
+
+.base {
+  font-family: var(--oswald);
+  font-size: 16px;
+  font-weight: var(--fw-regular);
+  line-height: 24%;
+  text-transform: uppercase;
+}
+
+.body-small {
+  font-family: var(--mulish);
+  font-size: 12px;
+  font-weight: var(--fw-medium);
+  line-height: 16%;
+}
+
+.body-base {
+  font-family: var(--mulish);
+  font-size: 16px;
+  font-weight: var(--fw-regular);
+  line-height: 150%;
+}
+
+.body-base-italic {
+  font-family: var(--mulish);
+  font-size: 16px;
+  font-weight: var(--fw-regular);
+  line-height: 20%;
+  font-style: italic;
+}
+
+.body-decoration {
+  font-family: var(--oswald);
+  font-size: 48px;
+  font-weight: var(--fw-light);
+  line-height: 54%;
+}
+
+.btn {
+  @apply flex items-center justify-center transition-colors;
+
+  width: 200px;
+  min-width: 200px;
+  height: 60px;
+  padding: 0 20px;
+  background: var(--secondary);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--primary);
+}
+
+.btn:hover > span {
+  color: var(--secondary);
+}
+
+.vertical-text {
+  writing-mode: sideways-lr;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 380px) {
+  .container {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
