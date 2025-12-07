@@ -6,10 +6,10 @@
   --color-light: #ffffff;
   --color-overlay: rgba(34, 34, 34, 0.6);
 
-  --breakpoint-xs: 38rem;
-  --breakpoint-sm: 50rem;
-  --breakpoint-md: 76.8rem;
-  --breakpoint-xl: 144rem;
+  --breakpoint-xs: 380px;
+  --breakpoint-sm: 500px;
+  --breakpoint-md7: 768px;
+  --breakpoint-xl: 1440px;
 }
 
 html {
@@ -178,11 +178,11 @@ html {
   }
 }
 
-.modal-overlay-enter {
+.overlay-enter {
   animation: fadeInOverlay 0.25s ease-out forwards;
 }
 
-.modal-overlay-exit {
+.overlay-exit {
   animation: fadeOutOverlay 0.25s ease-out forwards;
 }
 
@@ -192,4 +192,30 @@ html {
 
 .modal-exit {
   animation: modalOut 0.25s ease-in forwards;
+}
+
+@keyframes menuIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes menuOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.menu-enter {
+  animation: menuIn 0.25s ease-out forwards;
+}
+
+.menu-exit {
+  animation: menuOut 0.25s ease-in forwards;
 }

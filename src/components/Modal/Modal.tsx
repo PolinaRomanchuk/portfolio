@@ -35,7 +35,7 @@ const Modal = ({ setIsModalOpen }: ModalProps): ReactElement => {
   return (
     <div
       className={`fixed inset-0 z-10 flex items-center justify-center w-screen h-screen bg-overlay
-        ${closing ? 'modal-overlay-exit' : 'modal-overlay-enter'}
+        ${closing ? 'overlay-exit' : 'overlay-enter'}
       `}
       onClick={handleClose}
     >
