@@ -48,27 +48,27 @@ const Header = (): ReactElement => {
           <nav className="min-w-[44.6rem] hidden md:block">
             <ul className="flex items-center justify-around 2-full">
               <li>
-                <a href="#" className="base text-light ">
+                <a href="#about" className="base text-light ">
                   about me
                 </a>
               </li>
               <li>
-                <a href="#" className="base text-light ">
+                <a href="#portfolio" className="base text-light ">
                   portfolio
                 </a>
               </li>
               <li>
-                <a href="#" className="base text-light ">
+                <a href="#price" className="base text-light ">
                   price
                 </a>
               </li>
               <li>
-                <a href="#" className="base text-light ">
+                <a href="#faq" className="base text-light ">
                   faq
                 </a>
               </li>
               <li>
-                <a href="#" className="base text-light ">
+                <a href="#contacts" className="base text-light ">
                   contacts
                 </a>
               </li>

@@ -5,7 +5,10 @@ import Photo3 from '../../assets/about/img-photographer-3.png';
 
 const About = (): ReactElement => {
   return (
-    <section className="container flex gap-[4rem] min-h-[75rem] px-[2rem] py-[6rem]">
+    <section
+      className="container flex gap-[4rem] min-h-[75rem] px-[2rem] py-[6rem]"
+      id="about"
+    >
       <div className="flex flex-col gap-[4rem] justify-between">
         <div className="w-[44rem] h-[44rem]">
           <img

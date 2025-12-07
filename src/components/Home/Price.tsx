@@ -6,7 +6,10 @@ type PriceProps = { setIsModalOpen: (isOpen: boolean) => void };
 
 const Price = ({ setIsModalOpen }: PriceProps): ReactElement => {
   return (
-    <section className="container py-[6rem] px-[2rem] min-h-[73.6rem] flex flex-col gap-[4rem]">
+    <section
+      className="container py-[6rem] px-[2rem] min-h-[73.6rem] flex flex-col gap-[4rem]"
+      id="price"
+    >
       <div className="gap-[1.2rem] h-[7.6rem]">
         <h2 className="h2">Packages & Pricing</h2>
         <p className="body-base">

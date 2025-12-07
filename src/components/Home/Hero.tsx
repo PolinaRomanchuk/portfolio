@@ -4,6 +4,13 @@ import Photo1 from '../../assets/hero/img-10.png';
 import Photo2 from '../../assets/hero/img-11.png';
 
 const Hero = (): ReactElement => {
+  const handleClick = () => {
+    const el = document.getElementById('about');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="flex">
       <div className="container flex bg-secondary min-h-[86.2rem] gap-[2rem]">
@@ -45,7 +52,10 @@ const Hero = (): ReactElement => {
                 Capture the Moment. Tell Your Story.
               </h3>
             </div>
-            <div className="flex items-center gap-[0.8rem] cursor-pointer">
+            <div
+              className="flex items-center gap-[0.8rem] cursor-pointer"
+              onClick={handleClick}
+            >
               <span className="text-light body-base">Scroll down</span>
               <img src={Arrow} alt="arrow" />
             </div>

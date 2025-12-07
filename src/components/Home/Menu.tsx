@@ -10,6 +10,17 @@ const Menu = ({ closing, onClose }: MenuProps): ReactElement => {
     document.body.classList.toggle('no-scroll', !closing);
     return () => document.body.classList.remove('no-scroll');
   }, [closing]);
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    onClose();
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 250);
+  };
+
   return (
     <div
       className={`absolute w-screen h-screen bg-secondary ${closing ? 'menu-exit' : 'menu-enter'}`}
@@ -17,27 +28,47 @@ const Menu = ({ closing, onClose }: MenuProps): ReactElement => {
     >
       <ul className="flex flex-col items-center justify-center h-full gap-[3rem]">
         <li>
-          <a href="#" className="base text-light ">
+          <a
+            href="#about"
+            className="base text-light "
+            onClick={(e) => handleClick(e, 'about')}
+          >
             about me
           </a>
         </li>
         <li>
-          <a href="#" className="base text-light ">
+          <a
+            href="#portfolio"
+            className="base text-light "
+            onClick={(e) => handleClick(e, 'portfolio')}
+          >
             portfolio
           </a>
         </li>
         <li>
-          <a href="#" className="base text-light ">
+          <a
+            href="#price"
+            className="base text-light "
+            onClick={(e) => handleClick(e, 'price')}
+          >
             price
           </a>
         </li>
         <li>
-          <a href="#" className="base text-light ">
+          <a
+            href="#faq"
+            className="base text-light "
+            onClick={(e) => handleClick(e, 'faq')}
+          >
             faq
           </a>
         </li>
         <li>
-          <a href="#" className="base text-light ">
+          <a
+            href="#contacts"
+            className="base text-light "
+            onClick={(e) => handleClick(e, 'contacts')}
+          >
             contacts
           </a>
         </li>

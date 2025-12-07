@@ -8,7 +8,10 @@ import { auto } from '@popperjs/core';
 
 const Portfolio = (): ReactElement => {
   return (
-    <section className="container gap-[4rem] px-[2rem] py-[6rem] flex bg-secondary min-h-[91.4rem]">
+    <section
+      className="container gap-[4rem] px-[2rem] py-[6rem] flex bg-secondary min-h-[91.4rem]"
+      id="portfolio"
+    >
       <div className="gap-[4rem] w-full flex flex-col">
         <div className="gap-[1.2rem] w-[36rem] min-h-[10rem]">
           <h2 className="h2 text-light">my portfolio</h2>
