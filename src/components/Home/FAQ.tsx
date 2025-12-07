@@ -5,7 +5,7 @@ import Question from './Question';
 const FAQ = (): ReactElement => {
   return (
     <section
-      className="container  bg-secondary flex min-h-[72.4em] px-[2rem] py-[6rem] gap-[4rem]"
+      className="container  bg-secondary flex min-h-[72.4em] px-[2rem] py-[6rem] gap-[4rem] transition-colors duration-300"
       id="faq"
     >
       <div className="min-w-[68rem]">

@@ -14,8 +14,8 @@
 
 html {
   font-size: 10px;
-    scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
 }
 
 :root {
@@ -220,4 +220,38 @@ html {
 
 .menu-exit {
   animation: menuOut 0.25s ease-in forwards;
+}
+
+.user-clicked {
+  cursor: pointer;
+  color: var(--color-light);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.svg {
+  &:hover {
+    path {
+      stroke: var(--color-primary);
+      fill: var(--color-primary);
+    }
+  }
+}
+
+.svg-stroke {
+  &:hover {
+    path {
+      stroke: var(--color-primary);
+      
+    }
+  }
+}
+
+input{
+  &:hover, &:focus {
+    outline: var(--color-primary);
+  }
 }

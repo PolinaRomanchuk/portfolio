@@ -57,10 +57,10 @@ const Modal = ({ setIsModalOpen }: ModalProps): ReactElement => {
         <input
           type="text"
           placeholder="your name"
-          className="border-secondary border-1 px-[1.2rem] w-[30rem] sm:w-[38rem]  h-[6rem] max-w-[38rem] base "
+          className="border-secondary border-1 px-[1.2rem] w-[30rem] sm:w-[38rem]  h-[6rem] max-w-[38rem] base hover:border-primary focus:border-primary focus:outline-none"
         />
         <input
-          className="border-secondary border-1 px-[1.2rem] w-[30rem] sm:w-[38rem] h-[6rem] max-w-[38rem] base "
+          className="border-secondary border-1 px-[1.2rem] w-[30rem] sm:w-[38rem] h-[6rem] max-w-[38rem] base hover:border-primary focus:border-primary focus:outline-none"
           type="text"
           placeholder="+1"
         />

@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 
 const inputStyle =
-  'border-secondary border-1 px-[1.2rem] w-[38rem] h-[6rem] max-w-[38rem] base ';
+  'border-secondary border-1 px-[1.2rem] w-[38rem] h-[6rem] max-w-[38rem] base hover:border-primary focus:border-primary focus:outline-none';
 
 const Connection = (): ReactElement => {
   return (

@@ -16,7 +16,12 @@ const PriceCard = ({
   setIsModalOpen,
 }: PriceCard): ReactElement => {
   return (
-    <div className="border-dark border-[0.1rem] p-[2.4rem] w-[32rem] h-[50rem] flex flex-col justify-between">
+    <div
+      className="group border-dark border-[0.1rem] p-[2.4rem] w-[32rem] h-[50rem] flex flex-col justify-between hover:border-primary transition-all cursor-pointer duration-300"
+      onClick={() => {
+        setIsModalOpen(true);
+      }}
+    >
       <div className="gap-[1.2rem] flex flex-col  w-[27.2rem]">
         <h3 className="h3">{name}</h3>
         <ul className="flex flex-col gap-[0.4rem]">
@@ -31,12 +36,7 @@ const PriceCard = ({
       </div>
       <div className="h-[11.2rem] flex flex-col justify-end gap-[1.2rem]">
         <div className="body-base-italic">{purpose}</div>
-        <button
-          className="btn min-h-[6rem] w-[27.2rem]"
-          onClick={() => {
-            setIsModalOpen(true);
-          }}
-        >
+        <button className="min-w-[20rem] min-h-[6rem] w-[27.2rem]  px-[2rem] bg-secondary cursor-pointer transition-colors transition-transform duration-300 ease-in-out transform group-hover:scale-[1.03] group-hover:bg-primary">
           <span className="base text-light">book now</span>
         </button>
       </div>

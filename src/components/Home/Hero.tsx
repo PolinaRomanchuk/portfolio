@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import Arrow from '../../assets/arrow-down.svg';
+import Arrow from '../../assets/arrow-down.svg?react';
 import Photo1 from '../../assets/hero/img-10.png';
 import Photo2 from '../../assets/hero/img-11.png';
 
@@ -53,11 +53,11 @@ const Hero = (): ReactElement => {
               </h3>
             </div>
             <div
-              className="flex items-center gap-[0.8rem] cursor-pointer"
+              className="flex items-center gap-[0.8rem] cursor-pointer svg-stroke  user-clicked text-light body-base"
               onClick={handleClick}
             >
-              <span className="text-light body-base">Scroll down</span>
-              <img src={Arrow} alt="arrow" />
+              Scroll down
+              <Arrow />
             </div>
           </div>
 

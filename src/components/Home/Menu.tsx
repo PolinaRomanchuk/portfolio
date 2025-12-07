@@ -30,7 +30,7 @@ const Menu = ({ closing, onClose }: MenuProps): ReactElement => {
         <li>
           <a
             href="#about"
-            className="base text-light "
+            className="base text-light user-clicked"
             onClick={(e) => handleClick(e, 'about')}
           >
             about me
@@ -39,7 +39,7 @@ const Menu = ({ closing, onClose }: MenuProps): ReactElement => {
         <li>
           <a
             href="#portfolio"
-            className="base text-light "
+            className="base text-light user-clicked"
             onClick={(e) => handleClick(e, 'portfolio')}
           >
             portfolio
@@ -48,7 +48,7 @@ const Menu = ({ closing, onClose }: MenuProps): ReactElement => {
         <li>
           <a
             href="#price"
-            className="base text-light "
+            className="base text-light user-clicked"
             onClick={(e) => handleClick(e, 'price')}
           >
             price
@@ -57,7 +57,7 @@ const Menu = ({ closing, onClose }: MenuProps): ReactElement => {
         <li>
           <a
             href="#faq"
-            className="base text-light "
+            className="base text-light user-clicked"
             onClick={(e) => handleClick(e, 'faq')}
           >
             faq
@@ -66,7 +66,7 @@ const Menu = ({ closing, onClose }: MenuProps): ReactElement => {
         <li>
           <a
             href="#contacts"
-            className="base text-light "
+            className="base text-light user-clicked"
             onClick={(e) => handleClick(e, 'contacts')}
           >
             contacts

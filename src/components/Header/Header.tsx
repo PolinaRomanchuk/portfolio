@@ -48,27 +48,27 @@ const Header = (): ReactElement => {
           <nav className="min-w-[44.6rem] hidden md:block">
             <ul className="flex items-center justify-around 2-full">
               <li>
-                <a href="#about" className="base text-light ">
+                <a href="#about" className="base text-light user-clicked">
                   about me
                 </a>
               </li>
               <li>
-                <a href="#portfolio" className="base text-light ">
+                <a href="#portfolio" className="base text-light user-clicked">
                   portfolio
                 </a>
               </li>
               <li>
-                <a href="#price" className="base text-light ">
+                <a href="#price" className="base text-light user-clicked">
                   price
                 </a>
               </li>
               <li>
-                <a href="#faq" className="base text-light ">
+                <a href="#faq" className="base text-light user-clicked">
                   faq
                 </a>
               </li>
               <li>
-                <a href="#contacts" className="base text-light ">
+                <a href="#contacts" className="base text-light user-clicked">
                   contacts
                 </a>
               </li>
@@ -77,14 +77,14 @@ const Header = (): ReactElement => {
 
           <button
             onClick={handleMenuToggle}
-            className="md:hidden w-8 h-8 relative flex flex-col justify-center items-end gap-[0.6rem] px-[2rem] cursor-pointer"
+            className="group md:hidden w-8 h-8 relative flex flex-col justify-center items-end gap-[0.6rem] px-[2rem] cursor-pointer "
           >
             <span
-              className={`block h-[0.2rem] bg-light transform transition-all duration-300 ease-in-out
+              className={`block h-[0.2rem] bg-light transform transition-all duration-300 ease-in-out group-hover:bg-primary
       ${isMenuOpen ? 'rotate-45 absolute top-1/2 left-0 w-8 translate-y-[-50%]' : 'w-[1.2rem]'}`}
             ></span>
             <span
-              className={`block h-[0.2rem] bg-light transform transition-all duration-300 ease-in-out
+              className={`block h-[0.2rem] bg-light transform transition-all duration-300 ease-in-out group-hover:bg-primary
       ${isMenuOpen ? '-rotate-45 absolute top-1/2 left-0 w-8 translate-y-[-50%]' : 'w-8'}`}
             ></span>
           </button>
