@@ -14,38 +14,24 @@ const PriceCard = ({
   purpose,
 }: PriceCard): ReactElement => {
   return (
-    <div
-      style={{
-        border: '1px solid #222',
-        padding: '24px',
-        width: '320px',
-        height: '500px',
-      }}
-    >
-      <div className="d-flex flex-column justify-content-between h-100">
-        <div className="d-flex gap-4 flex-column">
-          <h3 className="h3">{name}</h3>
-          <ul>
-            {description.map((desc) => (
-              <li key={desc}>{desc}</li>
-            ))}
-          </ul>
-          <h4 className="h4">{price}</h4>
-        </div>
-        <div>
-          <span className="body-base-italic">{purpose}</span>
-          <button
-            className="bg-secondary"
-            style={{
-              padding: '0px 20px',
-              width: '272px',
-              height: '60px',
-              minWidth: '200px',
-            }}
-          >
-            <span className="base text-light">book now</span>
-          </button>
-        </div>
+    <div className="border-dark border-[0.1rem] p-[2.4rem] w-[32rem] h-[50rem] flex flex-col justify-between">
+      <div className="gap-[1.2rem] flex flex-col  w-[27.2rem]">
+        <h3 className="h3">{name}</h3>
+        <ul className="flex flex-col gap-[0.4rem]">
+          {description.map((desc) => (
+            <li key={desc} className="body-base">
+              <span className="w-[6px] h-[6px] bg-secondary inline-block"></span>
+              <span> {desc}</span>
+            </li>
+          ))}
+        </ul>
+        <h4 className="h4">{price}</h4>
+      </div>
+      <div className="h-[11.2rem] flex flex-col justify-end gap-[1.2rem]">
+        <div className="body-base-italic">{purpose}</div>
+        <button className="bg-secondary min-w-[20rem] min-h-[6rem] w-[27.2rem] px-[2rem]">
+          <span className="base text-light">book now</span>
+        </button>
       </div>
     </div>
   );

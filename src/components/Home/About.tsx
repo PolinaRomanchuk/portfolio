@@ -3,20 +3,19 @@ import Photo1 from '../../assets/about/img-photographer-1.png';
 import Photo2 from '../../assets/about/img-photographer-2.png';
 import Photo3 from '../../assets/about/img-photographer-3.png';
 
-const photoStyle = { width: '440px', height: '440px', objectFit: 'cover' };
-
 const About = (): ReactElement => {
   return (
-    <section
-      className="container-xl d-flex py-5 d-flex gap-5"
-      style={{ height: '750px' }}
-    >
-      <div className="d-flex flex-column gap-5 my-3 mx-2">
-        <div>
-          <img src={Photo1} alt="photo" style={photoStyle} />
+    <section className="container flex gap-[4rem] min-h-[75rem] px-[2rem] py-[6rem]">
+      <div className="flex flex-col gap-[4rem] justify-between">
+        <div className="w-[44rem] h-[44rem]">
+          <img
+            src={Photo1}
+            alt="photo"
+            className="object-cover w-full h-full"
+          />
         </div>
-        <div className="d-flex flex-column gap-4">
-          <h2 className="h2">about me</h2>
+        <div className="flex flex-col gap-[1.2rem] min-h-[14.8rem] justify-between">
+          <h2 className="h2 h-[4rem]">about me</h2>
           <span className="body-base">
             Hi! I’m Vera, a photographer with 5 years of experience. For me,
             photography is more than just an image. It’s a way to feel the
@@ -25,21 +24,31 @@ const About = (): ReactElement => {
           </span>
         </div>
       </div>
-      <div className="d-flex flex-column gap-5 my-3">
-        <span>
+      <div className="flex flex-col gap-[4rem]">
+        <span className="body-base">
           I shoot all across Europe. I love natural light, genuine emotions, and
           beautiful details. Each shot is a small piece of art. My goal is to
           create timeless images that tell your unique story.
         </span>
-        <div>
-          <img src={Photo2} alt="photo" style={photoStyle} />
+        <div className="w-[44rem] h-[44rem]">
+          <img
+            src={Photo2}
+            alt="photo"
+            className="object-cover w-full h-full"
+          />
         </div>
       </div>
-      <div className="d-flex flex-column my-3 gap-5">
-        <div>
-          <img src={Photo3} alt="photo" style={photoStyle} />
+      <div className="flex flex-col gap-[4rem]">
+        <div className="w-[44rem] h-[44rem]">
+          <img
+            src={Photo3}
+            alt="photo"
+            className="object-cover w-full h-full"
+          />
         </div>
-        <span>Seeing with heart. Shooting with soul.</span>
+        <span className="body-base">
+          Seeing with heart. Shooting with soul.
+        </span>
       </div>
     </section>
   );

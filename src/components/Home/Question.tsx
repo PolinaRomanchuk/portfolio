@@ -11,22 +11,14 @@ const Question = ({ name, answer }: QuestionProps): ReactElement => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
-      style={{
-        borderBottom: '1px solid #ffffff',
-        minHeight: '64px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-      }}
-    >
-      <div className="d-flex justify-content-between align-items-center">
+    <div className="border-b-light border-b-1 min-h-[6.4rem] flex flex-col justify-center gap-[2rem]">
+      <div className="flex items-center justify-between py-[1.2rem]">
         <h3 className="h3">{name}</h3>
         <button
           onClick={() => {
             setIsOpen((prew) => !prew);
           }}
-          style={{ background: 'unset', border: 'unset' }}
+          className="p-0 m-0 bg-transparent border-0 cursor-pointer"
         >
           {isOpen ? (
             <img src={Minus} alt="minus" />
@@ -35,7 +27,7 @@ const Question = ({ name, answer }: QuestionProps): ReactElement => {
           )}
         </button>
       </div>
-      {isOpen && <div className="body-base py-2">{answer}</div>}
+      {isOpen && <div className="body-base">{answer}</div>}
     </div>
   );
 };

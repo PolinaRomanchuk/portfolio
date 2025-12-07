@@ -4,11 +4,13 @@ import Logo from '../../assets/logo.svg';
 const Header = (): ReactElement => {
   return (
     <header>
-      <div className="container flex items-center justify-between bg-secondary p-5">
-        <img src={Logo} alt="logo" />
+      <div className="container flex items-center justify-between  bg-secondary min-h-[6rem]">
+        <div className="p-8">
+          <img src={Logo} alt="logo" className="w-[2rem] h-[2rem] " />
+        </div>
 
-        <nav>
-          <ul className="flex items-center gap-10">
+        <nav className="min-w-[44.6rem]">
+          <ul className="flex items-center justify-around 2-full">
             <li>
               <a href="#" className="base text-light ">
                 about me

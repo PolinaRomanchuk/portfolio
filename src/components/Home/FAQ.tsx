@@ -4,17 +4,14 @@ import Question from './Question';
 
 const FAQ = (): ReactElement => {
   return (
-    <section
-      className="container-xl p-4 bg-secondary d-flex"
-      style={{ minHeight: '724px' }}
-    >
-      <div className="w-50 py-5 d-flex flex-column gap-4">
+    <section className="container  bg-secondary flex min-h-[72.4em] px-[2rem] py-[6rem] gap-[4rem]">
+      <div className="min-w-[68rem]">
         <h2 className="h2 text-light">Frequently Asked Questions</h2>
         <p className="body-base text-light">
           Everything You Wanted to Ask (and a Bit More)
         </p>
       </div>
-      <div className="text-light w-50 d-flex flex-column h-100 justify-content-between py-5 px-4">
+      <div className="min-w-[68rem] text-light">
         {questions.map((question) => (
           <Question
             name={question.name}

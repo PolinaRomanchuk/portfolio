@@ -4,7 +4,7 @@ import Contact from './Contact';
 
 const Footer = (): ReactElement => {
   return (
-    <footer className="container-xl p-0">
+    <footer className="container">
       <Connection />
       <Contact />
     </footer>
