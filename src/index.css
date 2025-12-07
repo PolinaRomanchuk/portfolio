@@ -4,6 +4,12 @@
   --color-primary: #ff3c3c;
   --color-secondary: #222222;
   --color-light: #ffffff;
+  --color-overlay: rgba(34, 34, 34, 0.6);
+
+  --breakpoint-xs: 38rem;
+  --breakpoint-sm: 50rem;
+  --breakpoint-md: 76.8rem;
+  --breakpoint-xl: 144rem;
 }
 
 html {
@@ -47,7 +53,7 @@ html {
   font-family: var(--oswald);
   font-size: 16px;
   font-weight: var(--fw-regular);
-  line-height: 24%;
+  line-height: 60%;
 }
 
 .base {
@@ -68,7 +74,6 @@ html {
   font-family: var(--mulish);
   font-size: 16px;
   font-weight: var(--fw-regular);
-  line-height: 150%;
 }
 
 .body-base-italic {
@@ -86,22 +91,19 @@ html {
 }
 
 .btn {
-  @apply flex items-center justify-center transition-colors;
-
-  width: 200px;
-  min-width: 200px;
-  height: 60px;
-  padding: 0 20px;
-  background: var(--secondary);
+  min-width: 20rem;
+  height: 6rem;
+  padding: 0 2rem;
+  background-color: var(--color-secondary);
   cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .btn:hover {
-  background: var(--primary);
-}
-
-.btn:hover > span {
-  color: var(--secondary);
+  background: var(--color-primary);
+  transform: translateY(-2px) scale(1.03);
 }
 
 .vertical-text {
@@ -130,4 +132,64 @@ html {
   .container {
     max-width: 960px;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@keyframes fadeInOverlay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutOverlay {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+}
+
+.modal-overlay-enter {
+  animation: fadeInOverlay 0.25s ease-out forwards;
+}
+
+.modal-overlay-exit {
+  animation: fadeOutOverlay 0.25s ease-out forwards;
+}
+
+.modal-enter {
+  animation: modalIn 0.25s ease-out forwards;
+}
+
+.modal-exit {
+  animation: modalOut 0.25s ease-in forwards;
 }

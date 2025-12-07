@@ -5,6 +5,7 @@ type PriceCard = {
   description: string[];
   price: string;
   purpose: string;
+  setIsModalOpen: (isOpen: boolean) => void;
 };
 
 const PriceCard = ({
@@ -12,6 +13,7 @@ const PriceCard = ({
   description,
   price,
   purpose,
+  setIsModalOpen,
 }: PriceCard): ReactElement => {
   return (
     <div className="border-dark border-[0.1rem] p-[2.4rem] w-[32rem] h-[50rem] flex flex-col justify-between">
@@ -29,7 +31,12 @@ const PriceCard = ({
       </div>
       <div className="h-[11.2rem] flex flex-col justify-end gap-[1.2rem]">
         <div className="body-base-italic">{purpose}</div>
-        <button className="bg-secondary min-w-[20rem] min-h-[6rem] w-[27.2rem] px-[2rem]">
+        <button
+          className="btn min-h-[6rem] w-[27.2rem]"
+          onClick={() => {
+            setIsModalOpen(true);
+          }}
+        >
           <span className="base text-light">book now</span>
         </button>
       </div>

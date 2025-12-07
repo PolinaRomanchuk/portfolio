@@ -2,7 +2,9 @@ import type { ReactElement } from 'react';
 import PriceCard from './PriceCard';
 import { cards } from '../../data/price';
 
-const Price = (): ReactElement => {
+type PriceProps = { setIsModalOpen: (isOpen: boolean) => void };
+
+const Price = ({ setIsModalOpen }: PriceProps): ReactElement => {
   return (
     <section className="container py-[6rem] px-[2rem] min-h-[73.6rem] flex flex-col gap-[4rem]">
       <div className="gap-[1.2rem] h-[7.6rem]">
@@ -20,6 +22,7 @@ const Price = (): ReactElement => {
             price={card.price}
             purpose={card.purpose}
             key={card.name}
+            setIsModalOpen={setIsModalOpen}
           />
         ))}
       </div>

@@ -12,7 +12,7 @@ const Connection = (): ReactElement => {
       <div className="flex gap-[0.8rem]">
         <input type="text" placeholder="your name" className={inputStyle} />{' '}
         <input className={inputStyle} type="text" placeholder="+1" />{' '}
-        <button className="px-[2rem] w-[20rem] h-[6rem] min-w-[20rem] bg-secondary cursor-pointer">
+        <button className="btn">
           <span className="text-light base">book now</span>
         </button>
       </div>
